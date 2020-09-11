@@ -1,4 +1,4 @@
-def ways ( length , prev = 'a') :
+def ways ( length ) :
     #Base Case(s)
     if length == 0:
         return 1
@@ -10,12 +10,14 @@ def ways ( length , prev = 'a') :
 
 
     #Red Case
-    if prev != 'R':
-        r = ways ( length - 1 , 'R')
-    else:
-        r = ways ( length - 3,  'R')
+    r = ways()
 
 
 
-    return b + r, b, r
+    return b + r
 print(ways(1))
+#1) You can take two arguments, but it'll be simpler if you only take one.
+
+#2) You use a/B/R inconsistently.
+
+#3) Your red cases aren't quite thought out correctly.
